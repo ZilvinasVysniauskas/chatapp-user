@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name:  chatapp-user
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: chatapp-user
+  template:
+    metadata:
+      labels:
+        app: chatapp-user
+    spec:
+      containers:
+        - name: chatapp-user
+          image:  zilvinas0147/chatapp-user:v1.2.0
+          ports:
+            - containerPort: 8082
