@@ -2,11 +2,12 @@ apiVersion: v1
 kind: Service
 metadata:
   name: chatapp-user-service
+  namespace: chatapp-namespace
 spec:
   type: LoadBalancer
   selector:
-    app: chatapp-user-service
+    app: chatapp-user
   ports:
     - protocol: TCP
       port: 80
-      targetPort: 8082git
+      targetPort: 8082
