@@ -10,9 +10,6 @@ spring:
     password: "root"
     driver-class-name: com.mysql.cj.jdbc.Driver
 
-  application:
-      name: nooooo
-  profiles:
-    active: test
+# config server is only used when running in docker
   config:
-    import: optional:configserver:http://localhost:8881
+    import: optional:configserver:http://localhost:8888
