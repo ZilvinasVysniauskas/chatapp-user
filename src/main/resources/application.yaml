@@ -5,7 +5,14 @@ spring:
   jpa:
     show-sql: true
   datasource:
-    url: jdbc:mysql://34.68.129.10:3306/chatapp_user?allowPublicKeyRetrieval=true&useSSL=false
-    username: chatapp-user-mysql
-    password: "&14EM'^9SDMh1kx|"
+    url: jdbc:mysql://localhost:3306/chatapp_user
+    username: root
+    password: "root"
     driver-class-name: com.mysql.cj.jdbc.Driver
+
+  application:
+      name: nooooo
+  profiles:
+    active: test
+  config:
+    import: optional:configserver:http://localhost:8881
